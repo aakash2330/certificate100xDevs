@@ -14,12 +14,14 @@ export async function POST(req:NextRequest){
    
     ensureDbConnected();
     const body = await req.json();
-    console.log("HERE")
     const certificate = await CERTIFICATE.findOne({certificateID:body.certificateId})
-    console.log(body.certificateId);
+    console.log({certificate});
 
     if(certificate){
         return NextResponse.json({authenticated:true})
+    }
+    else{
+        return NextResponse.json({authenticated:false})
     }
 }catch(error){
 console.log(error);

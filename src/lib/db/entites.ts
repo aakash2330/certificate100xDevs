@@ -11,4 +11,4 @@ type certificateSchemaType = {
 }
 
 // export const CERTIFICATE = mongoose.model.certificate || mongoose.model('certificate',certificateSchema);
-export const CERTIFICATE = mongoose.models.certificate ?? mongoose.model('certificate', certificateSchema);
+export const CERTIFICATE = mongoose.models.certificate || mongoose.model('certificate', certificateSchema);
