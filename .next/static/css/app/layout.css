@@ -606,6 +606,9 @@ video {
 .w-64 {
   width: 16rem;
 }
+.w-\[10rem\] {
+  width: 10rem;
+}
 .w-full {
   width: 100%;
 }
